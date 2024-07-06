@@ -1,6 +1,6 @@
 const video = document.querySelector('.video-background')
 const swiperText = new Swiper('.swiper', {
-    speed: 2000,
+    speed: 1800,
     mousewheel: { },
     pagination: {
         el: '.swiper-pagination',
@@ -13,7 +13,7 @@ const swiperText = new Swiper('.swiper', {
 })
 
 swiperText.on('slideChange', function() {
-    gsap.to(video, 3.5, {
+    gsap.to(video, 2.5, {
         currentTime: (video.duration / this.slides.length) * this.realIndex,
         ease: Power1.easeOut
     })
